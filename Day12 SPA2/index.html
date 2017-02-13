@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta  charset='utf-8'>
+<style type="text/css">
+	form{
+		width:400px;
+		height:400px;
+	}
+	//over writing bootstrap class
+	.btn{
+		margin-top: 5px;
+	}
+
+	.formbox{
+		margin: 200px auto;
+		border: 2px solid #e1c6c6;
+		width: 500px;
+		padding: 44px;
+		border-radius: 5px;
+
+	}
+</style>
+</head>
+<body ng-app="app">
+
+<div class="container">
+<div ui-view></div>
+</div>
+
+
+<!--Bootstrap(Front End Design)-->
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<!--Jquery (JQuery Events)-->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap Events-->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+<!--Angular Modules-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/ngstorage/ngStorage.js"></script>
+<!--App Module-->
+<script src="app.js"></script>
+<!--Config file-->
+<script src="config.js"></script>
+
+<!-- Custom Services-->
+
+
+
+<!-- Controllers-->
+<script src="controllers/login.js"></script>
+<script src="controllers/home.js"></script>
+</body>
+</html>
