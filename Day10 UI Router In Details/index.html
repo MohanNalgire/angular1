@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript" src="controller/ctrl1.js"></script>
+    <script type="text/javascript" src="controller/ctrl2.js"></script>
+
+</head>
+<body ng-app="app">
+<a ui-sref="page_one({id:1,name:'test'})">Page One</a>&emsp;&emsp;&emsp;&emsp;
+<a ui-sref="page_two">Page two</a>
+<div ui-view>
+
+</div>
+</body>
+</html>

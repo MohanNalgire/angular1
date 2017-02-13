@@ -1,0 +1,59 @@
+<!doctype html>
+        <html>
+    <head>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="module/module.js"></script>
+        <script type="text/javascript" src="controllers/ctrl1.js"></script>
+        <script type="text/javascript" src="controllers/ctrl2.js"></script>
+        <script type="text/javascript" src="controllers/ctrl3.js"></script>
+        <script type="text/javascript" src="controllers/ctrl4.js"></script>
+        <script type="text/javascript" src="controllers/ctrl4.js"></script>
+
+    </head>
+    <body ng-app="app">
+        <div ng-controller="ctrl1">
+            <h3>contrller1 $http</h3>
+            {{var_one}}
+            <pre>{{var_one.data.records|json}}</pre>
+            <table class="table table-responsive table-bordered">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Country</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input type="text" ng-model="f.Name" /></td>
+                    <td><input type="text" ng-model="f.City" /></td>
+                    <td><input type="text" ng-model="f.Country" /></td>
+                </tr>
+                <tr ng-repeat="x in var_one.data.records |filter:f">
+                    <td>{{x.Name}}</td>
+                    <td>{{x.City}}</td>
+                    <td>{{x.Country}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div ng-controller="ctrl2">
+            <h3>contrller2 $http.get method.</h3>{{var_two}}
+            <h3>contrller2 $http.get short method.</h3>{{var_two_short}}
+        </div>
+
+        <div ng-controller="ctrl3">
+            <h3>contrller3 $http.jsonp method.</h3>{{var_three}}
+        </div>
+
+        <div ng-controller="ctrl4">
+            <h3>contrller4 $http.post method.</h3>
+            {{va_four}}
+            {{var_four_error_status}}
+        </div>
+
+
+    </body>
+</html>

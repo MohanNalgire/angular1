@@ -1,0 +1,22 @@
+{
+  "name": "namedviews",
+  "description": "Angular with named views",
+  "main": "index.html",
+  "authors": [
+    "Mohan"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.6.0",
+    "angular-ui-router": "~0.3.2"
+  }
+}
