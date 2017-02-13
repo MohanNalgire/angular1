@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title></title>
+</head>
+<body ng-app="app">
+
+<table border="1"> 
+	<caption> number and currency filter </caption>
+	<tr>
+		<th>Field Name</th>
+		<th>Field Input</th>
+		<th>number filter</th>
+		<th>currency filter</th>
+	</tr>
+	<tr>
+		<td>Any Number </td>
+		<td><input type="number" ng-model="any_num"  /></td>
+		<td>{{ any_num | number }}</td>
+		<td>{{ any_num | currency }} </td>
+	</tr>
+</table>
+
+<table border="1" >
+	<caption>Uppercase and lowercase filters in Angular 1</caption>
+<tr>
+	<th>Field Name</th>
+	<th>Field Input</th>
+	<th>Uppercase</th>
+	<th>Lowercase</th>
+</tr>
+<tr>
+	<td>First Name</td>
+	<td><input type="text" name="" ng-model="f_name" />
+	<td>{{ f_name | uppercase }}
+	<td>{{ f_name | lowercase }}
+</tr>
+</table>
+
+<table border="1">
+	<caption>Date filter </caption>
+	<tr>
+		<th>Field Name</th>
+		<th>Field Input</th>
+		<th>medium format</th>
+		<th>short format</th>
+		<th>fullDate format</th>
+		<th>longDate format</th>
+		<th>mediumDate format</th>
+		<th>shortDate format</th>
+		<th>mediumTime format</th>
+		<th>shortTime format</th>
+	</tr>
+	<tr>
+		<td>Birthdate</td>
+		<td><input type="date" name="" ng-model="birth_date" /> </td>
+		<td>{{ birth_date | date:'medium' }}</td>
+		<td>{{ birth_date | date:'short' }}</td>
+
+		<td>{{ birth_date |  date:'fullDate' }} </td>
+		<td>{{ birth_date |  date:'longDate' }} </td>
+		<td>{{ birth_date |  date:'mediumDate' }}</td>
+		<Td>{{ birth_date |  date:'shortDate' }}</td>
+
+		<td>{{ birth_date |  date:'mediumTime' }}</td>
+		<td>{{ birth_date |  date:'shortTime' }}</td>
+	</tr>
+ </table>
+
+
+
+<!-- please check for depenancy of js files according to packages -->
+<script src="../node_modules/jquery/dist/jquery.js" ></script>
+<!-- <script src="../node_modules/bootstrap/js/button.js" ></script>-->
+<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
+<!-- Angular 1 files-->
+<script src="../node_modules/angular/angular.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

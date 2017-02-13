@@ -1,0 +1,11 @@
+angular.js:14324 Error: [$controller:ctrlreg] The controller with the name 'ctrl1' is not registered
+answer
+    check that files of controller are loaded or not
+    Declare controller functions
+
+
+
+angular-ui-router.js:18 Uncaught TypeError: Cannot read property 'isDefined' of undefined
+answer
+    Check fistly angular.js file is loaded or not
+    After angular.js file load the angular-ui-router.js file
