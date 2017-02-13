@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        .form-block{
+            width: 40%;
+            margin: 0 auto;
+            background: #F2F2F2;
+           margin-top: 100px;
+            border-radius: 7px;
+        }
+        .form-block img{
+            position: relative;
+            top:25px;
+        }
+        .form{
+            width: 100%;
+            padding: 50px;
+        }
+
+    </style>
+</head>
+<html lang="en">
+    <div class="container">
+        <div class="form-block">
+            <div class="text-center">
+                <a href="/login.html"><img src="images/logo.png" /></a>
+            </div>
+            <form class="form" name="myForm" ng-submit="login_details({u_name:uname,u_pwd:upwd})">
+                <div class="form-group">
+                    <label>Username</label>
+                    <input type="text" name="uname" class="form-control" ng-model="uname" placeholder="Username" ng-minlength="4" ng-maxlength="8" required />
+                <span ng-messages="myForm.uname.$error" ng-if="myForm.uname.$dirty">
+                    <span ng-messages-include="message.html"></span>
+                </span>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="upwd" ng-model="upwd" placeholder="Password" required />
+                <span ng-messages="myForm.upwd.$error"ng-if="myForm.upwd.$dirty">
+                    <span ng-messages-include="message.html"></span>
+                </span>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">Log In</button>
+                </div>
+                <label><a href="#">Forgot password</a></label>
+            </form>
+        </div>
+    </div>
+</html>
